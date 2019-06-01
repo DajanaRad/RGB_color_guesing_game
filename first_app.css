@@ -1,0 +1,142 @@
+.conteiner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: minmax(50px, 150px) 10px minmax(50px, 150px);
+  grid-template-rows: repeat(2, minmax(50px, 150px));
+  -ms-grid-columns: minmax(50px, 150px) 10px minmax(50px, 150px) 10px
+    minmax(50px, 150px);
+  grid-template-columns: repeat(3, minmax(50px, 150px));
+  grid-gap: 10px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.conteiner > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+.conteiner > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+.conteiner > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+}
+.conteiner > *:nth-child(4) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+.conteiner > *:nth-child(5) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+}
+.conteiner > *:nth-child(6) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+}
+
+.conteiner div {
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+.choosing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: #42f4e8;
+  text-transform: uppercase;
+  height: 100%;
+}
+
+.p1 {
+  margin: 0 auto;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  /* align-self: center; */
+}
+.text {
+  margin-right: 1.3rem;
+  color: red;
+  font-weight: bold;
+  width: 4.5rem;
+}
+button {
+  background-color: #42f4e8;
+  font-size: 1rem;
+  padding: 0;
+  border: 0px;
+  height: 100%;
+}
+
+.mesagge {
+  color: black;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+}
+
+.choose-dificulty {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+
+  height: 100%;
+}
+.p2 {
+  margin-right: 2rem;
+}
+
+.game {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+@media (max-width: 50rem) {
+  .p1 {
+    margin-left: 0.8rem;
+  }
+  .choose-dificulty {
+    margin-right: 0.3rem;
+  }
+  .p2 {
+    margin-right: 0.6rem;
+  }
+}
+
+@media (max-width: 35rem) {
+  .text {
+    display: none;
+  }
+}
+@media (max-width: 25rem) {
+  .p1,
+  .reset,
+  .mesagge,
+  .choose-dificulty p,
+  .choose-dificulty p button {
+    font-size: 0.8rem;
+  }
+
+  .p1 {
+    margin-left: 0.2rem;
+  }
+}
